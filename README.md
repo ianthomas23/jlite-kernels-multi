@@ -1,6 +1,8 @@
 Example JupyterLite deployment with `pyodide` and `xeus-cpp`, `xeus-python` and `xeus-r` kernels.
 There are multiple environment files, one for each `xeus` kernel.
 
+Deployment available on github pages at https://ianthomas23.github.io/jlite-kernels-multi.
+
 To build and deploy locally:
 
 ```bash
