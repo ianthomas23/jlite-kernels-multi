@@ -1,0 +1,8 @@
+name: temp-deploy-python
+channels:
+  - https://repo.prefix.dev/emscripten-forge-dev
+  - conda-forge
+dependencies:
+  - xeus-python
+  - ipympl
+  - matplotlib
