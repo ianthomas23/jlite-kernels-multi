@@ -1,6 +1,6 @@
-name: env-cpp
+name: env-py
 channels:
   - https://repo.prefix.dev/emscripten-forge-dev
   - conda-forge
 dependencies:
-  - xeus-cpp
+  - xeus-python

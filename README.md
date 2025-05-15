@@ -8,7 +8,7 @@ To build and deploy locally:
 ```bash
 micromamba create -f build-environment.yml
 micromamba activate jlite-kernels-multi
-jupyter lite build --contents contents --output-dir dist --XeusAddon.environment_file=env-cpp.yml --XeusAddon.environment_file=env-python.yml --XeusAddon.environment_file=env-r.yml
+jupyter lite build --contents contents --output-dir dist --XeusAddon.environment_file=env-cpp.yml --XeusAddon.environment_file=env-lua.yml --XeusAddon.environment_file=env-py.yml --XeusAddon.environment_file=env-py-mpl.yml --XeusAddon.environment_file=env-r.yml
 npx static-handler dist
 ```
 

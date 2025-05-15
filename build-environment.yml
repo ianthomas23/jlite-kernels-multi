@@ -5,6 +5,6 @@ dependencies:
   - jupyter_server
   - nodejs=20
   - pip:
-    - jupyterlite-core>=0.6.0a10
-    - jupyterlite-xeus>=4.0.0a7
-    - jupyterlite-pyodide-kernel>=0.6.0a6
+    - jupyterlite-core>=0.6.0b0
+    - jupyterlite-xeus>=4.0.0a9
+    - jupyterlite-pyodide-kernel>=0.6.0b1

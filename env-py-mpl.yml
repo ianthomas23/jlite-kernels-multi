@@ -1,6 +1,8 @@
-name: env-cpp
+name: env-py-mpl
 channels:
   - https://repo.prefix.dev/emscripten-forge-dev
   - conda-forge
 dependencies:
-  - xeus-cpp
+  - xeus-python
+  - ipympl
+  - matplotlib
