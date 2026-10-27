@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - jupyter_server
-  - nodejs=20
+  - nodejs
   - jupyterlite-core
   - jupyterlite-xeus
   - jupyterlite-pyodide-kernel

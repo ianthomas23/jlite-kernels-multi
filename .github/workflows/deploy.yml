@@ -14,15 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.13'
 
       - name: Install mamba
-        uses: mamba-org/setup-micromamba@v1
+        uses: mamba-org/setup-micromamba@main
         with:
           environment-file: build-environment.yml
           cache-environment: true
@@ -30,10 +30,11 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
-          jupyter lite build --contents contents --output-dir dist --XeusAddon.environment_file=env-cpp.yml --XeusAddon.environment_file=env-lua.yml --XeusAddon.environment_file=env-py.yml --XeusAddon.environment_file=env-py-mpl.yml --XeusAddon.environment_file=env-r.yml
+          jupyter lite build --contents contents --output-dir dist --XeusAddon.environment_file=env-py.yml --XeusAddon.environment_file=env-py-mpl.yml
+          #jupyter lite build --contents contents --output-dir dist --XeusAddon.environment_file=env-cpp.yml --XeusAddon.environment_file=env-lua.yml --XeusAddon.environment_file=env-py.yml --XeusAddon.environment_file=env-py-mpl.yml --XeusAddon.environment_file=env-r.yml
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
 
@@ -52,4 +53,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
